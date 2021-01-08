@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shape Control</title>
+    <!-- Load the Paper.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.11/paper-full.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <v-app app id="app">
+      <v-main>
+        <v-container>
+            <v-row>
+                <v-col
+                    cols="12"
+                    xs="12"
+                    md="3"
+                >
+                    <v-row justify="center">
+                        <div>
+                            <p>Controls</p>
+                        </div>
+                    </v-row>
+                    <v-row>
+                        <v-spacer></v-spacer>
+                        <v-btn @click="up">
+                            <v-icon>
+                                mdi-arrow-up
+                            </v-icon>
+                        </v-btn>
+                        <v-spacer></v-spacer>
+                    </v-row>
+                    <v-row>
+                        <v-btn @click="left">
+                            <v-icon>
+                                mdi-arrow-left
+                            </v-icon>
+                        </v-btn>
+                        <v-spacer></v-spacer>
+                        <v-btn @click="right">
+                            <v-icon>
+                                mdi-arrow-right
+                            </v-icon>
+                        </v-btn>                            
+                    </v-row>
+                    <v-row>
+                        <v-spacer></v-spacer>
+                        <v-btn @click="down">
+                            <v-icon>
+                                mdi-arrow-down
+                            </v-icon>
+                        </v-btn>
+                        <v-spacer></v-spacer>                        
+                    </v-row>
+<br>
+<br>
+                    <v-row>
+                        <v-spacer></v-spacer>
+                        <v-btn @click="larger">larger</v-btn>
+                        <v-btn @click="smaller" class="text-caption">smaller</v-btn>                            
+                        <v-spacer></v-spacer>
+                    </v-row>
+                </v-col>
+                <v-col outlined color="purple">
+                    <canvas resize id="view"></canvas>
+                <v-col>
+            </v-row>
+        </v-container>
+      </v-main>
+    </v-app>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>
+
+Working examples based on the 
+<!-- https://gist.github.com/inanimatt/b70df31102c298122b0da25829647b37 -->
+<!-- https://stackoverflow.com/questions/45296121/can-t-access-to-custom-canvas-attribute-in-vue -->
