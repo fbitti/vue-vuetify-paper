@@ -2,7 +2,6 @@ var app = new Vue({
     el: '#app', // Bind the app to the div with id "app"
     vuetify: new Vuetify(),
     data: {
-      imagePath: '',
       paper: null, 
       circle: null
     },
